@@ -9,14 +9,41 @@ namespace Project
 {
     public class Solution
     {
-        public static bool DoIt(string expression)
+        static List<char> Possible;
+
+        public static bool DoIt(string str)
         {
-            //  the expression is given as argument, you must return the boolean answer:
-            //  true if the brackets/parenthesis & curly brackets are correctly paired
+            if (str == null)
+                return true;
 
-            //  Type your code here
+            var idx = 0;
+            Possible = new List<char>();
 
-            return true;
+            while (idx < str.Length)
+            {
+                switch (str[idx])
+                {
+                    case '(':
+                        Possible.Add(')');
+                        break;
+                    case '[':
+                        Possible.Add(']');
+                        break;
+                    case '{':
+                        Possible.Add('}');
+                        break;
+                    case ']':
+                    case ')':
+                    case '}':
+                        if ((Possible.Count == 0)
+                          || (Possible.ElementAt(Possible.Count - 1) != str[idx]))
+                            return false;
+                        Possible.RemoveAt(Possible.Count - 1);
+                        break;
+                }
+                idx++;
+            }
+            return (Possible.Count == 0);
         }
 
         //  Auto generated code, please don't modify the code below
