@@ -54,3 +54,4 @@ Project/bin
 Project/obj
 UnitTests/bin
 UnitTests/obj
+*.suo
