@@ -53,5 +53,23 @@ namespace Project
             var answer = Solution.DoIt("][");
             Check.That(answer).IsFalse();
         }
+        
+        [TestMethod]
+        public void Test7()
+        {
+            Check.That(Solution.DoIt("")).IsTrue();
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            Check.That(Solution.DoIt(null)).IsTrue();
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            Check.That(Solution.DoIt("([])))]]]")).IsFalse();
+        }
     }
 }
