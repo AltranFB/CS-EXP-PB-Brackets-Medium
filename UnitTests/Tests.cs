@@ -1,73 +1,73 @@
 ﻿using NFluent;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Project
+namespace BracketsExtreme
 {
     [TestClass]
     public class Tests
     {
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test0()
+        public void ProblemSolving1()
         {
             var answer = Solution.DoIt("{([]){}()}");
             Check.That(answer).IsTrue();
         }
 
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test1()
+        public void ProblemSolving2()
         {
             var answer = Solution.DoIt("{([{S}]]6K[()]}");
             Check.That(answer).IsFalse();
         }
 
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test2()
+        public void ProblemSolving3()
         {
             var answer = Solution.DoIt("{C{}[{[a]}RqhL]{y2}}");
             Check.That(answer).IsTrue();
         }
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test3()
+        public void ProblemSolving4()
         {
             var answer = Solution.DoIt("W12{}{}L{}");
             Check.That(answer).IsTrue();
         }
 
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test4()
+        public void ProblemSolving5()
         {
             var answer = Solution.DoIt("h{Pn{GT{h}(c))}");
             Check.That(answer).IsFalse();
         }
 
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test5()
+        public void ProblemSolving6()
         {
             var answer = Solution.DoIt("{[{iHTSc}]}p(R)m(){q({})");
             Check.That(answer).IsFalse();
         }
 
         [TestCategory("Problem Solving"), TestMethod]
-        public void Test6()
+        public void ProblemSolving7()
         {
             var answer = Solution.DoIt("][");
             Check.That(answer).IsFalse();
         }
         
         [TestCategory("Reliability"), TestMethod]
-        public void Test7()
+        public void Reliability1()
         {
             Check.That(Solution.DoIt("")).IsTrue();
         }
 
         [TestCategory("Reliability"), TestMethod]
-        public void Test8()
+        public void Reliability2()
         {
             Check.That(Solution.DoIt(null)).IsTrue();
         }
 
         [TestCategory("Reliability"), TestMethod]
-        public void Test9()
+        public void Reliability3()
         {
             Check.That(Solution.DoIt("([])))]]]")).IsFalse();
         }
