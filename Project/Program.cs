@@ -5,7 +5,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Project
+namespace BracketsExtreme
 {
     public class Solution
     {
@@ -15,7 +15,6 @@ namespace Project
             //  true if the brackets/parenthesis & curly brackets are correctly paired
 
             //  Type your code here
-
             return true;
         }
 

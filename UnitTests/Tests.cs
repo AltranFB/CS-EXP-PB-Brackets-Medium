@@ -1,7 +1,7 @@
 ﻿using NFluent;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Project
+namespace BracketsExtreme
 {
     [TestClass]
     public class Tests
